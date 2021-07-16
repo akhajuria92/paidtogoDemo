@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout >
+    <data>
+        <variable name="self" type="com.aaronevans.paidtogo.ui.profile.organizations.OrganizationsFragment"/>
+    </data>
+    <androidx.constraintlayout.widget.ConstraintLayout
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:animateLayoutChanges="true">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/mRecyclerView"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:paddingBottom="150dp"
+            android:clipToPadding="false"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+
+        <LinearLayout
+            android:id="@+id/mAddOrganization"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginBottom="12dp"
+            android:background="@null"
+            android:gravity="center"
+            android:alpha="@{self.progress}"
+            android:translationY="@{(1f-self.progress) * 350}"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="@id/mRecyclerView"
+            app:layout_constraintEnd_toEndOf="@id/mRecyclerView">
+
+            <TextView
+                android:id="@+id/mAddButton"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:text="+"
+                android:visibility="gone"
+                android:textStyle="normal"
+                android:textColor="@android:color/white"
+                android:gravity="center"
+                android:textSize="44dp"
+                android:elevation="5dp"
+                android:layout_margin="12dp"
+                android:clickable="true"
+                android:backgroundTint="#C1C1C1"
+                android:background="@drawable/ripple_navigation_item"/>
+
+            <TextView
+                android:visibility="gone"
+                android:layout_marginTop="8dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/add_organization" />
+        </LinearLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:bind="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <variable
+            name="viewModel"
+            type="com.aaronevans.paidtogo.ui.main.leaderboard.LeaderBoardContract.ViewModel" />
+
+        <variable
+            name="self"
+            type="com.aaronevans.paidtogo.ui.main.leaderboard.LeaderBoardFragment" />
+
+        <variable
+            name="leaderboardpojo"
+            type="com.aaronevans.paidtogo.ui.main.leaderboard.LeaderBoardPojo" />
+
+    </data>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:layout_height="@dimen/_50sdp">
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_weight="1"
+                android:id="@+id/ll_month"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:id="@+id/tv_month"
+                    android:layout_marginRight="@dimen/_30sdp"
+                    android:textColor="@color/black"
+                    android:fontFamily="@font/firasans_medium"
+                    android:textSize="@dimen/_14sdp"
+                    android:layout_centerInParent="true"
+                    android:layout_height="wrap_content"/>
+
+                <ImageView
+                    android:layout_width="@dimen/_20sdp"
+                    android:layout_toRightOf="@+id/tv_month"
+                    android:layout_marginRight="@dimen/_20sdp"
+                    android:layout_centerInParent="true"
+                    android:background="@drawable/ic_down"
+                    android:layout_height="@dimen/_20sdp"/>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_weight="1"
+                android:id="@+id/ll_year"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:text="2021"
+                    android:id="@+id/tv_year"
+                    android:fontFamily="@font/firasans_medium"
+                    android:layout_marginRight="@dimen/_30sdp"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_14sdp"
+                    android:layout_centerInParent="true"
+                    android:layout_height="wrap_content"/>
+
+                <ImageView
+                    android:layout_width="@dimen/_20sdp"
+                    android:layout_toRightOf="@+id/tv_year"
+                    android:layout_marginRight="@dimen/_20sdp"
+                    android:layout_centerInParent="true"
+                    android:background="@drawable/ic_down"
+                    android:layout_height="@dimen/_20sdp"/>
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+        <androidx.viewpager.widget.ViewPager
+            android:id="@+id/mPager"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            />
+
+        <com.google.android.material.tabs.TabLayout
+            android:id="@+id/mIndicator"
+            android:layout_width="match_parent"
+            android:layout_height="20dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            app:tabBackground="@drawable/dot_selector"
+            app:tabGravity="center"
+            app:tabIndicatorHeight="0dp" />
+
+        <com.google.android.material.tabs.TabLayout
+            android:id="@+id/mTabLayout"
+            android:layout_width="match_parent"
+            android:layout_height="33dp"
+            android:visibility="gone"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/mIndicator" />
+
+        <RelativeLayout
+            android:id="@+id/mBackground"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginTop="8dp"
+            android:background="@color/green_balance">
+
+            <TextView
+                android:id="@+id/mLeftHeader"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="16dp"
+                android:fontFamily="@font/firasans_medium"
+                android:text="USER"
+                android:textColor="@android:color/white" />
+
+            <TextView
+                android:id="@+id/mRightHeader"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="16dp"
+                android:fontFamily="@font/firasans_medium"
+                android:text="POSITION"
+                android:textColor="@android:color/white" />
+        </RelativeLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:layout_height="wrap_content">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/mRecyclerView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:textColor="@color/black"
+                android:gravity="center"
+                android:id="@+id/tv_no_data"
+                android:fontFamily="@font/firasans_medium"
+                android:padding="@dimen/_5sdp"
+                android:text="No Data Found"
+                android:textSize="@dimen/_14sdp" />
+
+
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:padding="@dimen/_5sdp"
+            android:text="Payments are sent out up to 30 days after you purchase a USD payout. USD value based on $500 prize for 20,000 Coins"
+            android:textSize="@dimen/_14sdp" />
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+        <VideoView
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:id="@+id/videoView" />
+    </RelativeLayout>
+</layout>

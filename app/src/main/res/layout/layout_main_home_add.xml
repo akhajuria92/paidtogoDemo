@@ -1,0 +1,383 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="activityStatistics"
+            type="com.aaronevans.paidtogo.data.entities.Summary" />
+
+    </data>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+      >
+
+        <LinearLayout
+            android:layout_above="@+id/fm"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="@dimen/_10sdp"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:layout_marginRight="@dimen/_10sdp"
+            android:layout_weight=".62"
+            android:background="@android:color/white"
+            android:elevation="3dp"
+            android:orientation="vertical"
+            android:paddingBottom="@dimen/_10sdp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:layout_marginRight="@dimen/_5sdp"
+                android:layout_marginBottom="@dimen/_2sdp"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/cardTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="12dp"
+                    android:fontFamily="@font/firasans_light"
+                    android:text="@string/paidtogo_local_points"
+                    android:textAllCaps="false"
+                    android:textStyle="bold" />
+
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/_3sdp"
+                    android:layout_marginRight="@dimen/_5sdp"
+                    android:background="@color/gray"
+                    android:gravity="center"
+                    android:padding="@dimen/_3sdp">
+
+                    <TextView
+                        android:id="@+id/mspanText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="@dimen/_3sdp"
+                        android:text="TODAY"
+                        android:textAllCaps="true"
+                        android:textSize="@dimen/_8sdp">
+
+                    </TextView>
+
+                    <ImageView
+                        android:id="@+id/imageView2"
+                        android:layout_width="@dimen/_12sdp"
+                        android:layout_height="@dimen/_12sdp"
+                        android:layout_toRightOf="@id/mspanText"
+                        android:src="@drawable/ic_down" />
+
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:weightSum="3">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@android:color/white"
+                    android:orientation="vertical"
+                    android:paddingLeft="@dimen/_5sdp"
+                    android:paddingRight="@dimen/_5sdp"
+                    android:weightSum="3">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:weightSum="2">
+
+                        <LinearLayout
+                            style="@style/ExcerciseItemNew"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/mLocalPointsText2"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/sf_display_black"
+                                android:text="0"
+                                android:textColor="@color/app_red"
+                                android:textSize="32sp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/reward_type"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="@dimen/_4sdp"
+                                android:fontFamily="@font/sf_display_medium"
+                                android:text="COINS"
+                                android:textColor="@color/app_red"
+                                android:textSize="@dimen/_12sdp" />
+
+
+
+                            <TextView
+                                android:id="@+id/usdValue"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="@dimen/_4sdp"
+                                android:fontFamily="@font/firasans_regular"
+                                android:text="USD value up to: $0.000"
+                                android:textColor="@android:color/black"
+                                android:textSize="@dimen/_10sdp" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            style="@style/ExcerciseItemNew"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:backgroundTint="@color/app_red"
+                            android:orientation="vertical">
+
+                            <ImageView
+                                android:layout_width="18dp"
+                                android:layout_height="22dp"
+                                android:layout_marginTop="-14dp"
+                                android:src="@drawable/ic_footsteps_white" />
+
+                            <TextView
+                                android:id="@+id/mStepsText2"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/_3sdp"
+                                android:fontFamily="@font/sf_display_black"
+                                android:textColor="@android:color/white"
+                                android:textSize="@dimen/_12sdp"
+                                android:text="22"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/sf_display_medium"
+                                android:text="@string/steps"
+                                android:textColor="@android:color/white"
+                                android:textSize="@dimen/_10sdp" />
+
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:weightSum="2">
+
+                        <LinearLayout
+                            style="@style/ExcerciseItemNew"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:backgroundTint="@color/app_sky_blue"
+                            android:orientation="vertical">
+
+
+                            <ImageView
+                                android:layout_width="20dp"
+                                android:layout_height="21dp"
+                                android:layout_marginTop="-14dp"
+                                android:layout_marginBottom="4dp"
+                                android:src="@drawable/ic_gas_station_white" />
+
+                            <TextView
+                                android:id="@+id/mGasSavedText2"
+                                android:layout_width="wrap_content"
+
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/_3sdp"
+                                android:fontFamily="@font/sf_display_black"
+                                android:text="0"
+                                android:textColor="@android:color/white"
+                                android:textSize="@dimen/_12sdp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/sf_display_medium"
+                                android:text="@string/gal_gas_saved"
+                                android:textColor="@android:color/white"
+                                android:textSize="@dimen/_10sdp" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            style="@style/ExcerciseItemNew"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:backgroundTint="@color/app_blue"
+                            android:orientation="vertical">
+
+                            <ImageView
+                                android:layout_width="20dp"
+                                android:layout_height="21dp"
+                                android:layout_marginTop="-14dp"
+                                android:layout_marginBottom="4dp"
+                                android:src="@drawable/ic_road_pin_white" />
+
+                            <TextView
+                                android:id="@+id/mMilesTraveledText2"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/_3sdp"
+                                android:text="0"
+                                android:fontFamily="@font/sf_display_black"
+                                android:textColor="@android:color/white"
+                                android:textSize="@dimen/_12sdp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/sf_display_medium"
+                                android:text="@string/milesTraveled"
+                                android:textColor="@android:color/white"
+                                android:textSize="@dimen/_10sdp" />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:weightSum="2">
+
+                        <LinearLayout
+                            style="@style/ExcerciseItemNew"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:backgroundTint="@color/app_yellow"
+                            android:orientation="vertical">
+
+                            <ImageView
+                                android:layout_width="20dp"
+                                android:layout_height="21dp"
+                                android:layout_marginTop="-14dp"
+                                android:layout_marginBottom="4dp"
+                                android:src="@drawable/ic_leaf_white" />
+
+                            <TextView
+                                android:id="@+id/mCO2OffsetText2"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/_3sdp"
+                                android:text="0"
+
+                                android:fontFamily="@font/sf_display_black"
+                                android:textColor="@android:color/white"
+                                android:textSize="@dimen/_12sdp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/sf_display_medium"
+                                android:text="@string/lbs_co2_offset"
+                                android:textColor="@android:color/white"
+                                android:textSize="@dimen/_10sdp" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            style="@style/ExcerciseItemNew"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:backgroundTint="@color/app_green"
+                            android:orientation="vertical">
+
+                            <ImageView
+                                android:layout_width="20dp"
+                                android:layout_height="21dp"
+                                android:layout_marginTop="-14dp"
+                                android:layout_marginBottom="4dp"
+                                android:src="@drawable/ic_fire_white" />
+
+                            <TextView
+                                android:id="@+id/mKCalBurntText2"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/_3sdp"
+                                android:text="0"
+
+                                android:fontFamily="@font/sf_display_black"
+                                android:textColor="@android:color/white"
+                                android:textSize="@dimen/_12sdp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/sf_display_medium"
+                                android:text="@string/kcal_burned"
+                                android:textColor="@android:color/white"
+                                android:textSize="@dimen/_10sdp" />
+
+                        </LinearLayout>
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+
+        <FrameLayout
+            android:id="@+id/fm"
+            android:layout_alignParentBottom="true"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_70sdp"
+            android:layout_gravity="bottom"
+            >
+
+            <include
+                android:visibility="gone"
+                layout="@layout/layout_main_home_stats"/>
+
+            <androidx.viewpager.widget.ViewPager
+                android:id="@+id/mPager"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="@dimen/_2sdp"
+                android:layout_marginRight="@dimen/_2sdp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <!--android:alpha="@{1f- viewModel.showAddProgress }"-->
+            <!--android:visibility="@{ viewModel.areStatsGone ? View.GONE : View.VISIBLE }"-->
+
+        </FrameLayout>
+    </RelativeLayout>
+</layout>

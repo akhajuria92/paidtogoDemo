@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+    <data>
+        <variable
+            name="viewModel"
+            type="com.aaronevans.paidtogo.data.entities.ActiveCommute" />
+    </data>
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="@dimen/_4sdp"
+        android:paddingBottom="@dimen/_4sdp">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/mProfilePicture"
+            android:layout_centerVertical="true"
+            android:layout_width="@dimen/_30sdp"
+            android:layout_marginLeft="@dimen/_10sdp"
+            android:layout_marginRight="@dimen/_10sdp"
+            android:layout_height="@dimen/_30sdp"
+            android:layout_alignParentLeft="true"
+            android:background="@drawable/ic_profile_placeholder"
+            android:elevation="1dp" />
+
+        <LinearLayout
+            android:id="@+id/ll_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/mProfilePicture"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/mProfileNameText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="8dp"
+                android:fontFamily="@font/firasans_medium"
+                android:text="@{viewModel.firstName +' '+ viewModel.lastName}"
+                android:textColor="@color/black"
+                tools:text="mProfileNameText" />
+
+            <TextView
+                android:id="@+id/mPointsText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="8dp"
+                android:layout_toRightOf="@+id/mProfileNameText"
+                android:fontFamily="@font/sf_display_medium"
+                android:text="1"
+                android:textSize="12sp"
+                android:textColor="@color/black"
+                tools:text="($0.00)" />
+
+            <TextView
+                android:id="@+id/mEarningsText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="8dp"
+                android:layout_toRightOf="@+id/ll_text"
+                android:fontFamily="@font/firasans_medium"
+                android:gravity="center"
+                android:text="1"
+                android:visibility="gone"
+                tools:text="errer" />
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/mPositionText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:textColor="@color/black"
+            android:layout_marginTop="8dp"
+            android:layout_toLeftOf="@+id/mCardinalText"
+            android:layout_centerVertical="true"
+            android:fontFamily="@font/firasans_medium"
+            android:text="1"
+            tools:text="dhslkjjklj" />
+
+        <TextView
+            android:id="@+id/mCardinalText"
+            android:layout_width="wrap_content"
+            android:textColor="@color/black"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginTop="8dp"
+            android:layout_marginRight="@dimen/_20sdp"
+            android:fontFamily="@font/firasans_medium"
+            android:text="st" />
+
+    </RelativeLayout>
+</layout>

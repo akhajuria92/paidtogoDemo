@@ -1,0 +1,230 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+
+    <group
+        android:id="@+id/g0"
+        android:checkableBehavior="none">
+        <item
+            android:id="@+id/home"
+        android:icon="@drawable/ic_app_logo"
+            android:title="@string/home" />
+    </group>
+
+    <group
+        android:id="@+id/g8"
+        android:checkableBehavior="none">
+        <item
+            android:id="@+id/activity_type"
+            android:icon="@drawable/ic_walkrun"
+            android:title="START ACTIVITY" />
+    </group>
+
+    <group
+        android:id="@+id/g10"
+        android:checkableBehavior="none"
+        android:visible="false">
+        <item
+            android:id="@+id/gym_checkin"
+            android:icon="@drawable/ic_menu_gym_pin"
+            android:title="GYM CHECK-IN" />
+    </group>
+
+    <group
+        android:id="@+id/g1"
+        android:checkableBehavior="none">
+        <item
+            android:id="@+id/profile"
+            android:icon="@drawable/ic_profile_gray"
+            android:title="@string/profile" />
+    </group>
+
+    <!--<group
+        android:id="@+id/g3"
+        android:checkableBehavior="none">
+        <item
+            android:id="@+id/activity"
+            android:icon="@drawable/ic_activity_gray"
+            android:title="@string/activity" />
+    </group>-->
+
+    <group
+        android:id="@+id/g9"
+        android:checkableBehavior="none">
+        <item
+            android:id="@+id/stats"
+            android:icon="@drawable/stats_icon"
+            android:title="STATS" />
+    </group>
+
+
+    <group
+        android:id="@+id/g12"
+        android:checkableBehavior="none">
+        <item
+            android:id="@+id/charts"
+            android:icon="@drawable/stats_icon"
+            android:title="CHARTS" />
+    </group>
+
+
+    <group
+        android:id="@+id/g4"
+        android:checkableBehavior="none">
+        <item
+            android:id="@+id/balance"
+            android:icon="@drawable/ic_balance_gray"
+            android:title="@string/balance" />
+    </group>
+
+    <group
+        android:id="@+id/g2"
+        android:checkableBehavior="none">
+        <item
+            android:id="@+id/leaderboard"
+            android:icon="@drawable/ic_leaderboard_gray"
+            android:title="@string/leaderboard" />
+    </group>
+
+
+    <group
+        android:id="@+id/g13"
+        android:checkableBehavior="none">
+        <item
+            android:id="@+id/winners"
+            android:icon="@drawable/ic_leaderboard_gray"
+            android:title="@string/winners" />
+    </group>
+
+
+   <!-- <group
+        android:id="@+id/g14"
+        android:checkableBehavior="none">
+        <item
+            android:id="@+id/prizelist"
+            android:icon="@drawable/ic_menu_prize_list"
+            android:title="@string/prize_table" />
+    </group>-->
+
+
+    <group
+        android:id="@+id/g6"
+        android:checkableBehavior="none">
+        <item
+            android:id="@+id/settings"
+            android:icon="@drawable/ic_settings_gray"
+            android:title="@string/settings" />
+    </group>
+
+    <group
+        android:id="@+id/g16"
+        android:checkableBehavior="none">
+        <item
+            android:id="@+id/pool_rules"
+            android:icon="@drawable/ic_rules"
+            android:title="POOL RULES" />
+    </group>
+
+
+
+    <group
+        android:id="@+id/g17"
+        android:checkableBehavior="none">
+        <item
+            android:id="@+id/upgrade"
+            android:icon="@drawable/icon_menu_upgradetopro"
+            android:title="UPGRADE TO PAIDTOGO PRO" />
+    </group>
+
+
+
+
+    <!--  <group
+          android:id="@+id/g5"
+          android:checkableBehavior="none">
+          <item
+              android:id="@+id/coupons"
+              android:icon="@drawable/ic_coupon_gray"
+              android:title="@string/coupons" />
+      </group>-->
+
+
+    <group
+        android:id="@+id/g7"
+        android:checkableBehavior="none">
+        <item
+            android:id="@+id/help"
+            android:icon="@drawable/ic_help_gray"
+            android:title="HOW IT WORKS" />
+    </group>
+
+    <group
+        android:id="@+id/g11"
+        android:checkableBehavior="none">
+        <item
+            android:id="@+id/terms"
+            android:icon="@drawable/ic_help_gray"
+            android:title="TERMS AND CONDITIONS" />
+    </group>
+
+
+    <group
+        android:id="@+id/g18"
+        android:checkableBehavior="none">
+        <item
+            android:id="@+id/rate_on_store"
+            android:icon="@drawable/play_icon"
+            android:title="RATE US ON PLAY STORE" />
+    </group>
+
+
+
+    <group
+        android:id="@+id/g19"
+        android:visible="false"
+        android:checkableBehavior="none">
+        <item
+            android:id="@+id/google_sync_info"
+            android:icon="@drawable/play_icon"
+            android:title="GOOGLE SYNC INFO" />
+    </group>
+
+    <group
+        android:id="@+id/g20"
+        android:checkableBehavior="none">
+        <item
+            android:id="@+id/complaint"
+            android:icon="@drawable/ic_help_gray"
+            android:title="COMPLAINT" />
+    </group>
+
+
+    <item
+        android:id="@+id/mStore"
+        android:icon="@drawable/ic_offer"
+        android:title="" />
+
+
+    <group
+        android:id="@+id/g23"
+        android:checkableBehavior="none">
+        <item
+            android:id="@+id/earnCoins"
+            android:icon="@drawable/ic_earn_coin"
+            android:title="EARN COINS" />
+    </group>
+
+
+    <group
+        android:id="@+id/g21"
+        android:checkableBehavior="none">
+        <item
+            android:id="@+id/mLogOut"
+            android:icon="@drawable/ic_help_gray"
+            android:title="LOGOUT" />
+    </group>
+
+
+</menu>

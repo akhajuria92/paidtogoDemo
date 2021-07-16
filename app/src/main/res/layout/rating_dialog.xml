@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:background="@drawable/rattingbg_radius"
+
+    android:layout_height="match_parent">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:orientation="vertical"
+        android:gravity="center">
+
+        <RelativeLayout
+            android:layout_marginTop="@dimen/_20sdp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_green_all_side_round">
+            <ImageView
+                android:layout_marginTop="@dimen/_10sdp"
+                android:layout_width="@dimen/_40sdp"
+                android:layout_height="@dimen/_40sdp"
+                android:src="@drawable/ic_app_logo"
+                />
+        </RelativeLayout>
+
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/_18sdp"
+            android:text="Enjoying Paidtogo?"
+            android:layout_marginTop="@dimen/_8sdp"
+            android:fontFamily="@font/sf_display_medium"
+            android:textColor="@android:color/black"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/_12sdp"
+            android:text="Want to rate it on the Play Store.?"
+            android:layout_marginTop="@dimen/_8sdp"
+            android:gravity="center"
+            android:fontFamily="@font/sf_display_regular"
+            android:textColor="@android:color/black"
+            />
+
+
+        <View
+            android:layout_marginTop="@dimen/_20sdp"
+            android:background="@color/gray"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"/>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/linearLayout"
+            android:layout_marginTop="@dimen/_8sdp">
+
+            <RatingBar
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/ratingBar"
+                android:progressTint="@color/gray"
+                android:isIndicator="true"
+                >
+            </RatingBar>
+
+        </LinearLayout>
+        <View
+            android:background="@color/gray"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"/>
+
+
+
+        <TextView
+            android:layout_marginBottom="@dimen/_15sdp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/textViewNotNow"
+            android:text="Not Now"
+            android:textSize="@dimen/_16sdp"
+            android:fontFamily="@font/sf_display_regular"
+            android:textColor="@android:color/holo_blue_dark"
+            ></TextView>
+
+
+
+
+
+    </LinearLayout>
+
+
+
+
+
+</RelativeLayout>

@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tool="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="match_parent"
+    android:layout_gravity="bottom"
+    android:gravity="bottom"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimary"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/transparent_white_60">
+
+            <TextView
+                android:id="@+id/tvCancel"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/_44sdp"
+                android:layout_alignParentLeft="true"
+                android:gravity="center"
+                android:paddingBottom="@dimen/_4sdp"
+                android:paddingLeft="@dimen/_8sdp"
+                android:paddingRight="@dimen/_8sdp"
+                android:paddingTop="@dimen/_4sdp"
+                android:text="Cancel"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_14sdp"
+                android:textStyle="normal" />
+
+            <TextView
+                android:id="@+id/tvOk"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/_44sdp"
+                android:layout_alignParentRight="true"
+                android:gravity="center"
+                android:paddingBottom="@dimen/_4sdp"
+                android:paddingLeft="@dimen/_18sdp"
+                android:paddingRight="@dimen/_8sdp"
+                android:paddingTop="@dimen/_4sdp"
+                android:text="Ok"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_14sdp"
+                android:textStyle="bold" />
+
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.7dp"
+            android:background="@color/black" />
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:layout_height="@dimen/_160sdp">
+
+            <TextView
+                android:id="@+id/tvTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:gravity="center"
+
+                android:text="Select an Activity to start"
+
+                android:textSize="@dimen/_14sdp"
+                android:textStyle="normal" />
+
+            <com.shawnlin.numberpicker.NumberPicker
+                android:id="@+id/picker"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:gravity="center"
+                app:np_dividerColor="@color/transparent_white_60"
+                app:np_dividerThickness="0.8dp"
+                app:np_height="@dimen/_140sdp"
+                app:np_orientation="vertical"
+                app:np_selectedTextColor="@color/black"
+                app:np_selectedTextSize="@dimen/_22sdp"
+                app:np_textColor="@color/colorPrimaryDark"
+                app:np_textSize="@dimen/_22sdp"
+                app:np_value="1"
+                app:np_wheelItemCount="3"
+                app:np_width="@dimen/_44sdp" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>

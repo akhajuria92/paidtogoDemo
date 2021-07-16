@@ -1,0 +1,164 @@
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:map="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/mAppBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/mToolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?actionBarSize"
+            map:title="Activity Map"/>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <fragment
+        android:id="@+id/map"
+        android:name="com.google.android.gms.maps.SupportMapFragment"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        map:layout_constraintBottom_toBottomOf="parent"
+        map:layout_constraintEnd_toEndOf="parent"
+        map:layout_constraintHorizontal_bias="0.0"
+        map:layout_constraintStart_toStartOf="parent"
+        map:layout_constraintTop_toBottomOf="@id/mAppBar"
+        map:layout_constraintVertical_bias="0.0"
+        tools:context="com.aaronevans.paidtogo.ui.map.MapActivity" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/marker_click"
+        android:layout_width="match_parent"
+        android:layout_height="153dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="16dp"
+        android:background="@color/colorPrimary"
+        map:layout_constraintBottom_toBottomOf="parent"
+        map:layout_constraintEnd_toEndOf="parent"
+        map:layout_constraintStart_toStartOf="parent"
+android:visibility="gone"
+        >
+
+
+        <TextView
+            android:id="@+id/btn_checkin"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_margin="12dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginBottom="8dp"
+            android:background="@color/gray_progress"
+
+            android:clickable="true"
+            android:focusable="true"
+            android:fontFamily="@font/firasans_semibold"
+            android:gravity="center"
+            android:paddingLeft="12dp"
+            android:paddingTop="8dp"
+            android:paddingRight="12dp"
+            android:paddingBottom="8dp"
+            android:text="Get Closer To Check In"
+            android:textAllCaps="true"
+            android:textColor="#ffffff"
+            map:layout_constraintBottom_toBottomOf="parent"
+            map:layout_constraintEnd_toEndOf="parent"
+            map:layout_constraintStart_toStartOf="parent" />
+
+        <ImageView
+            android:id="@+id/gym_logo"
+            android:layout_width="61dp"
+            android:layout_height="57dp"
+
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:scaleType="fitCenter"
+            android:src="@drawable/ph_organization"
+            map:layout_constraintStart_toStartOf="parent"
+            map:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/gym_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:fontFamily="@font/firasans_semibold"
+            android:text="Johnson &amp; Johnson"
+            map:layout_constraintStart_toEndOf="@+id/gym_logo"
+            map:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/gym_distance"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:fontFamily="@font/firasans_regular"
+            android:text="United States"
+            map:layout_constraintStart_toEndOf="@+id/gym_logo"
+            map:layout_constraintTop_toBottomOf="@+id/gym_name" />
+
+        <LinearLayout
+            android:id="@+id/mRemoveButton"
+            android:layout_width="84dp"
+            android:layout_height="79dp"
+            android:layout_margin="12dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:background="@drawable/ripple_gray"
+            android:backgroundTint="#ACACAC"
+            android:clickable="true"
+            android:focusable="true"
+            android:fontFamily="@font/firasans_semibold"
+            android:orientation="vertical"
+            android:paddingLeft="12dp"
+            android:paddingTop="8dp"
+
+            android:paddingRight="12dp"
+            android:paddingBottom="8dp"
+            map:layout_constraintEnd_toEndOf="parent"
+            map:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:singleLine="true"
+                android:text="Checked in"
+                android:textColor="@color/colorPrimary"
+                android:textSize="@dimen/_8sdp" />
+
+            <TextView
+                android:id="@+id/checkin_count"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:gravity="center"
+                android:singleLine="true"
+                android:text="3"
+                android:textColor="@color/colorPrimary"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:gravity="center"
+                android:singleLine="true"
+                android:text="Times"
+                android:textColor="@color/colorPrimary"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
+

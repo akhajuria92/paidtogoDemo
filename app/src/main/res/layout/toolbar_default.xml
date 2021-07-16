@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/mFrameLayoutActionBar"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/_50sdp"
+    android:background="@color/colorPrimary">
+
+    <ImageView
+        android:id="@+id/mBack"
+        android:layout_width="@dimen/_20sdp"
+        android:layout_height="@dimen/_20sdp"
+        android:layout_gravity="center_vertical"
+        android:layout_marginLeft="@dimen/_10sdp"
+        android:src="@mipmap/left_arrow" />
+
+    <TextView
+        android:id="@+id/mTitle"
+        android:text="@string/cancle_text"
+        style="@style/TitleToolBarEnd" />
+
+</FrameLayout>

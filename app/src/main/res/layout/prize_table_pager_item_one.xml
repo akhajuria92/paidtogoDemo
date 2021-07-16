@@ -1,0 +1,110 @@
+<FrameLayout xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="250dp"
+    xmlns:tools="http://schemas.android.com/tools">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="8dp"
+            android:background="@drawable/round_rect"
+            android:elevation="5dp">
+
+            <TextView
+                android:id="@+id/mTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Paidtogo pro pool"
+                android:textColor="@color/black"
+                android:textAllCaps="false"
+                android:textStyle="bold"
+                android:layout_marginLeft="@dimen/_10sdp"
+                android:layout_marginTop="@dimen/_15sdp"
+                android:fontFamily="@font/firasans_medium"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/mProfilePicture"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:background="@drawable/solid_circle"
+                android:src="@drawable/ic_profile_placeholder"
+                app:layout_constraintTop_toBottomOf="@id/mTitle"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"/>
+
+            <TextView
+                android:id="@+id/tv_prize"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="30sp"
+                android:text="0"
+                android:textColor="@color/black"
+                android:fontFamily="@font/firasans_medium"
+                app:layout_constraintTop_toBottomOf="@id/mTitle"
+                app:layout_constraintBottom_toTopOf="@id/mPointsLabelText"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toStartOf="@id/mProfilePicture"
+                app:layout_constraintVertical_chainStyle="packed"/>
+
+            <TextView
+                android:id="@+id/mPointsLabelText"
+                android:layout_width="wrap_content"
+                android:textColor="@color/black"
+                android:layout_height="wrap_content"
+                android:text="TOTAL PRIZES"
+                android:textSize="18sp"
+                android:fontFamily="@font/firasans_medium"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@id/mProfilePicture"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_prize" />
+
+            <TextView
+                android:id="@+id/tv_funds"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="$0.00"
+                android:textColor="@color/black"
+                android:textSize="30sp"
+                android:fontFamily="@font/firasans_medium"
+                app:layout_constraintTop_toBottomOf="@id/mTitle"
+                app:layout_constraintBottom_toTopOf="@id/mPlaceLabelText"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/mProfilePicture"
+                app:layout_constraintVertical_chainStyle="packed"/>
+
+            <TextView
+                android:id="@+id/mPositionText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="@dimen/_10sdp"
+                android:textColor="@color/black"
+                android:layout_marginTop="8dp"
+                android:fontFamily="@font/firasans_medium"
+                android:text="th"
+                app:layout_constraintTop_toBottomOf="parent"
+                app:layout_constraintBottom_toTopOf="parent"
+                app:layout_constraintEnd_toEndOf="@id/tv_funds"
+                app:layout_constraintStart_toEndOf="@id/tv_funds"
+                app:layout_constraintVertical_chainStyle="packed" />
+
+            <TextView
+                android:id="@+id/mPlaceLabelText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="TOTAL FUNDS"
+                android:textSize="18sp"
+                android:fontFamily="@font/firasans_medium"
+                app:layout_constraintTop_toBottomOf="@id/tv_funds"
+                android:textColor="@color/black"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/mProfilePicture"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </FrameLayout>

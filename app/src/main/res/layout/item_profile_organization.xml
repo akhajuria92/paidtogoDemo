@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="adapter"
+            type="com.aaronevans.paidtogo.ui.profile.organizations.components.OrganizationsAdapter" />
+
+        <variable
+            name="self"
+            type="com.aaronevans.paidtogo.ui.profile.organizations.components.OrganizationsAdapter.ViewHolder" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="90dp"
+        android:background="@drawable/round_rect"
+        android:elevation="3dp">
+
+        <ImageView
+            android:id="@+id/mOrganizationLogo"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_margin="12dp"
+            android:scaleType="fitCenter"
+            android:src="@drawable/ph_organization"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintDimensionRatio="1:1"
+            app:layout_constraintEnd_toStartOf="@id/mOrganizationName"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/mOrganizationName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_marginLeft="@dimen/_10sdp"
+            android:fontFamily="@font/firasans_semibold"
+            android:text="Johnson &amp; Johnson"
+            app:layout_constraintStart_toEndOf="@id/mOrganizationLogo"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/mOrganizationLocation"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            android:fontFamily="@font/firasans_regular"
+            android:text="United States"
+            app:layout_constraintStart_toStartOf="@id/mOrganizationName"
+            app:layout_constraintTop_toBottomOf="@id/mOrganizationName" />
+
+        <TextView
+            android:id="@+id/mOrganizationType"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/green_balance"
+            android:padding="2dp"
+            android:layout_margin="12dp"
+            android:fontFamily="@font/firasans_regular"
+            android:text="National"
+            android:visibility="gone"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"  />
+
+        <TextView
+            android:id="@+id/mRemoveButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="12dp"
+            android:background="@drawable/ripple_gray"
+            android:backgroundTint="#ACACAC"
+            android:clickable="true"
+            android:focusable="true"
+            android:fontFamily="@font/firasans_semibold"
+            android:onClick="@{(v) -> adapter.listener.onRemoveOrganization(self.getAdapterPosition()) }"
+            android:paddingBottom="8dp"
+            android:paddingLeft="12dp"
+            android:paddingRight="12dp"
+            android:paddingTop="8dp"
+            android:text="Remove"
+            android:textAllCaps="true"
+            android:textColor="#ffffff"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="12dp"
+            android:layout_marginTop="@dimen/_4sdp"
+            android:textSize="@dimen/_10sdp"
+            android:background="@color/green_balance"
+            android:text="@string/national"
+            android:padding="@dimen/_1sdp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

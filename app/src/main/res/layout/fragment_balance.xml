@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/balance_gray"
+    tools:context=".ui.main.balance.UserBalanceFragmentNew">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/balance_gray"
+        >
+
+
+        <FrameLayout
+            android:id="@+id/fragment_container"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:animateLayoutChanges="true"
+            tools:visibility="visible" />
+
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:id="@+id/view"
+        android:background="@android:color/darker_gray"
+        android:layout_above="@+id/ll_bottom"
+        android:layout_height="1dp"/>
+
+    <LinearLayout
+        android:id="@+id/ll_bottom"
+        android:layout_width="match_parent"
+
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:gravity="right"
+        android:paddingLeft="@dimen/_10sdp"
+        android:paddingTop="@dimen/_10sdp"
+        android:paddingBottom="@dimen/_10sdp"
+        android:layout_marginRight="@dimen/_10sdp"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:padding="@dimen/_5sdp"
+            android:textSize="@dimen/_12sdp"
+            android:id="@+id/textViewTotalCoins"
+            android:fontFamily="@font/firasans_regular"
+            android:text="Earned" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_12sdp"
+            android:id="@+id/textViewCurrentCycleCoins"
+            android:fontFamily="@font/firasans_regular"
+            android:padding="@dimen/_5sdp"
+            android:text="Paid" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:padding="@dimen/_5sdp"
+            android:textSize="@dimen/_12sdp"
+            android:id="@+id/textViewTotalEarnerUsd"
+            android:fontFamily="@font/firasans_regular"
+            android:text="Pending" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:padding="@dimen/_5sdp"
+            android:textSize="@dimen/_12sdp"
+            android:id="@+id/textViewCurrentCycleUsd"
+            android:fontFamily="@font/firasans_regular"
+            android:text="Pending" />
+
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:padding="@dimen/_5sdp"
+            android:gravity="center"
+            android:textSize="@dimen/_12sdp"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:fontFamily="@font/firasans_semibold"
+            android:text="*Potential earnings based on $500 prize for 20,000 Coins" />
+
+
+    </LinearLayout>
+
+
+    <VideoView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:id="@+id/videoView" />
+
+
+</RelativeLayout>

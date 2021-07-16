@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable name="viewModel"
+            type="com.aaronevans.paidtogo.data.remote.response.LeaderboardResponse"/>
+    </data>
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="250dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="8dp"
+            android:background="@drawable/round_rect"
+            android:elevation="5dp">
+
+            <TextView
+                android:id="@+id/mTitle"
+                android:textColor="@color/black"
+                tools:text="kjkhkjhkhkjhkjh"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAllCaps="true"
+                android:layout_marginLeft="@dimen/_10sdp"
+                android:layout_marginTop="@dimen/_15sdp"
+                android:fontFamily="@font/firasans_medium"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/mProfilePicture"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:background="@drawable/solid_circle"
+                android:src="@drawable/ic_profile_placeholder"
+                app:layout_constraintTop_toBottomOf="@id/mTitle"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"/>
+
+            <TextView
+                android:id="@+id/mPointsText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="30sp"
+                android:textColor="@color/black"
+                android:fontFamily="@font/firasans_medium"
+                app:layout_constraintTop_toBottomOf="@id/mTitle"
+                app:layout_constraintBottom_toTopOf="@id/mPointsLabelText"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toStartOf="@id/mProfilePicture"
+                app:layout_constraintVertical_chainStyle="packed"/>
+
+            <TextView
+                android:id="@+id/mPointsLabelText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="COINS"
+                android:textSize="18sp"
+                android:fontFamily="@font/firasans_medium"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@id/mProfilePicture"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/mPointsText" />
+
+            <TextView
+                android:id="@+id/mPlaceText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="-"
+                android:textColor="@color/black"
+                android:textSize="30sp"
+                android:fontFamily="@font/firasans_medium"
+                app:layout_constraintTop_toBottomOf="@id/mTitle"
+                app:layout_constraintBottom_toTopOf="@id/mPlaceLabelText"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/mProfilePicture"
+                app:layout_constraintVertical_chainStyle="packed"/>
+
+            <TextView
+                android:id="@+id/mPlaceLabelText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/place"
+                android:textAllCaps="true"
+                android:textSize="18sp"
+                android:fontFamily="@font/firasans_medium"
+                app:layout_constraintTop_toBottomOf="@id/mPlaceText"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/mProfilePicture"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/textViewPositon"
+                android:textColor="@color/black"
+                android:fontFamily="@font/firasans_medium"
+                app:layout_constraintStart_toEndOf="@id/mPlaceText"
+                app:layout_constraintTop_toTopOf="@id/mPlaceText"/>
+
+            <TextView
+                android:id="@+id/mFundsAvailable"
+                android:layout_width="match_parent"
+                android:padding="@dimen/_6sdp"
+                android:visibility="gone"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginBottom="16dp"
+                android:fontFamily="@font/firasans_medium"
+                android:gravity="center"
+                android:textAllCaps="false"
+                android:textSize="@dimen/_16sdp"
+                android:textColor="@color/black"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                tools:text="Funds Available: " />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </FrameLayout>
+</layout>

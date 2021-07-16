@@ -1,0 +1,243 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="activity"
+            type="com.aaronevans.paidtogo.data.entities.Activity_Home" />
+    </data>
+
+    <!-- ß(x) = x^3 -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:elevation="3dp"
+        android:layout_height="@dimen/_70sdp"
+        android:orientation="vertical">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/card_2"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_70sdp"
+            android:layout_margin="8dp"
+            android:background="@drawable/round_rect"
+            android:elevation="3dp">
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/vertical_guideline_1"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="0.25" />
+
+            <TextView
+                android:id="@+id/mDailyWalkStatusText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="12dp"
+                android:fontFamily="@font/firasans_regular"
+                android:gravity="right"
+                android:lineSpacingExtra="4dp"
+                android:lines="2"
+                android:text="@string/auto_tracking"
+                android:visibility="gone"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:layout_width="50dp"
+                android:layout_height="0dp"
+                android:src="@drawable/ic_walkrun"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintDimensionRatio="1:1"
+                app:layout_constraintEnd_toEndOf="@id/vertical_guideline_1"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <View
+                android:layout_width="2dp"
+                android:layout_height="match_parent"
+                android:layout_marginTop="14dp"
+                android:layout_marginBottom="14dp"
+                android:background="@color/colorAccent"
+                app:layout_constraintStart_toStartOf="@id/vertical_guideline_1" />
+
+            <TextView
+                android:id="@+id/mDailyWalkText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="12dp"
+                android:fontFamily="@font/firasans_medium"
+                android:text="@string/walk_run"
+                android:textAllCaps="true"
+                android:textSize="@dimen/_9sdp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toEndOf="@id/vertical_guideline_1"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/mDailyWalkedMilesText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/firasans_regular"
+                android:textSize="@dimen/_9sdp"
+                android:text="0.00"
+                app:layout_constraintStart_toStartOf="@id/mDailyWalkText"
+                app:layout_constraintTop_toBottomOf="@id/mDailyWalkText" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/card_3"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_margin="8dp"
+            android:layout_weight="1"
+            android:visibility="gone"
+            android:background="@drawable/round_rect"
+            android:elevation="3dp">
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/vertical_guideline_2"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                app:layout_constraintGuide_begin="99dp" />
+
+            <TextView
+                android:id="@+id/mDailyBicycleStatusText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="12dp"
+                android:fontFamily="@font/firasans_regular"
+                android:gravity="right"
+                android:lineSpacingExtra="4dp"
+                android:lines="2"
+                android:text="@string/auto_tracking"
+                android:visibility="gone"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:layout_width="50dp"
+                android:layout_height="0dp"
+                android:src="@drawable/ic_biker_with_bg"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintDimensionRatio="1:1"
+                app:layout_constraintEnd_toEndOf="@id/vertical_guideline_2"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <View
+                android:layout_width="2dp"
+                android:layout_height="match_parent"
+                android:layout_marginTop="14dp"
+                android:layout_marginBottom="14dp"
+                android:background="#ff7901"
+                app:layout_constraintStart_toStartOf="@id/vertical_guideline_2" />
+
+            <TextView
+                android:id="@+id/mDailyBicycleText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="12dp"
+                android:fontFamily="@font/firasans_medium"
+                android:text="@string/bicycle"
+                android:textAllCaps="true"
+                android:textSize="@dimen/_9sdp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toEndOf="@id/vertical_guideline_2"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/mDailyBikedMilesText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/firasans_regular"
+                android:textSize="@dimen/_9sdp"
+                app:layout_constraintStart_toStartOf="@id/mDailyBicycleText"
+                app:layout_constraintTop_toBottomOf="@id/mDailyBicycleText" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/card_4"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_margin="8dp"
+            android:visibility="gone"
+
+            android:layout_weight="1"
+            android:background="@drawable/round_rect"
+            android:elevation="3dp">
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/vertical_guideline_3"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="0.25" />
+
+            <TextView
+                android:id="@+id/mDailyWorkoutStatusText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="12dp"
+                android:fontFamily="@font/firasans_regular"
+                android:gravity="right"
+                android:lineSpacingExtra="4dp"
+                android:lines="2"
+                android:text="@string/start_workout"
+                android:visibility="gone"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:layout_width="50dp"
+                android:layout_height="0dp"
+                android:src="@drawable/ic_weight_with_bg"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintDimensionRatio="1:1"
+                app:layout_constraintEnd_toEndOf="@id/vertical_guideline_3"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <View
+                android:layout_width="2dp"
+                android:layout_height="match_parent"
+                android:layout_marginTop="14dp"
+                android:layout_marginBottom="14dp"
+                android:background="#c001ff"
+                app:layout_constraintStart_toStartOf="@id/vertical_guideline_3" />
+
+            <TextView
+                android:id="@+id/mDailyWorkoutCalsText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="12dp"
+                android:fontFamily="@font/firasans_medium"
+                android:text="@string/workout"
+                android:textAllCaps="true"
+                android:textSize="@dimen/_9sdp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toEndOf="@id/vertical_guideline_3"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/mDailyWorkoutedText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/firasans_regular"
+                android:textSize="@dimen/_9sdp"
+                app:layout_constraintStart_toStartOf="@id/mDailyWorkoutCalsText"
+                app:layout_constraintTop_toBottomOf="@id/mDailyWorkoutCalsText" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </LinearLayout>
+
+</layout>

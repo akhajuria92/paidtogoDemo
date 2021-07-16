@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_horizontal"
+    android:background="@color/app_sky_blue"
+    >
+
+
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/textViewItem"
+        android:layout_marginStart="@dimen/_14sdp"
+        android:layout_marginTop="@dimen/_20sdp"
+        android:layout_marginEnd="@dimen/_14sdp"
+        android:text="❖  Watch an ad and earn 1 Coin. You can earn up to 3 Paidtogo Coins per day."
+        android:fontFamily="@font/sf_display_medium"
+        android:textColor="@android:color/black"
+        android:textSize="@dimen/_14sdp">
+    </TextView>
+
+
+
+
+    <RelativeLayout
+        android:id="@+id/relativeLayoutWatchAdd"
+        android:layout_width="@dimen/_150sdp"
+        android:layout_height="@dimen/_30sdp"
+        android:layout_marginBottom="@dimen/_30sdp"
+        android:layout_centerHorizontal="true"
+        android:visibility="gone"
+        android:layout_alignParentBottom="true"
+        android:background="@android:color/white"
+        >
+
+
+        <TextView
+            android:id="@+id/textViewWatchAdd"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:fontFamily="@font/sf_display_medium"
+            android:gravity="center"
+            android:text="Watch Ad"
+            android:textAllCaps="true"
+            android:textColor="@color/pool_bg_color"
+            android:textSize="18sp" />
+    </RelativeLayout>
+
+
+
+</RelativeLayout>

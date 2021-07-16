@@ -1,0 +1,57 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:paddingTop="@dimen/_5sdp"
+        android:paddingLeft="@dimen/_20sdp"
+        android:paddingBottom="@dimen/_5sdp">
+
+        <TextView
+            android:id="@+id/mProfileNameText"
+            android:textColor="@color/black"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:layout_centerVertical="true"
+            android:textSize="18sp"
+            android:fontFamily="@font/firasans_medium"
+            android:text="@{viewModel.firstName +' '+ viewModel.lastName}"
+            tools:text="dhslkjhklsdjklj" />
+
+        <TextView
+            android:id="@+id/mPointsText"
+            android:textColor="@color/black"
+            android:layout_width="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="@dimen/_2sdp"
+            android:layout_below="@+id/mProfileNameText"
+            android:fontFamily="@font/firasans_medium"
+            tools:text="($0.00)" />
+
+        <TextView
+            android:id="@+id/mPositionText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:textSize="@dimen/_14sdp"
+            android:layout_toLeftOf="@+id/mCardinalText"
+            android:layout_centerVertical="true"
+            android:fontFamily="@font/firasans_medium"
+            android:text="1"
+            android:textColor="@color/black"
+            tools:text="1" />
+
+        <TextView
+            android:id="@+id/mCardinalText"
+            android:textColor="@color/black"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/_30sdp"
+            android:fontFamily="@font/firasans_medium"
+            android:text="st" />
+
+    </RelativeLayout>

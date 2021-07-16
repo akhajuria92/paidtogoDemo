@@ -1,0 +1,66 @@
+<RelativeLayout
+xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="80dp"
+    android:paddingTop="@dimen/_5sdp"
+    android:paddingLeft="@dimen/_20sdp"
+    android:paddingBottom="@dimen/_5sdp">
+
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:orientation="vertical"
+        >
+
+        <TextView
+            android:id="@+id/tv_date"
+            android:textSize="@dimen/_10sdp"
+            android:textColor="@color/black"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/mProfilePicture"
+            android:fontFamily="@font/firasans_regular"
+            tools:text="dhslkjhklsdjklj" />
+
+        <TextView
+            android:id="@+id/tv_coins"
+            android:textSize="@dimen/_10sdp"
+            android:textColor="@color/black"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/mProfilePicture"
+            android:fontFamily="@font/firasans_regular"
+            tools:text="dhslkjhklsdjklj" />
+
+    </LinearLayout>
+
+
+    <TextView
+        android:id="@+id/tv_payment"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="8dp"
+        android:textColor="@color/black"
+        android:textSize="@dimen/_10sdp"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="@dimen/_20sdp"
+        android:layout_centerVertical="true"
+        android:fontFamily="@font/firasans_medium"
+
+        android:text="1"
+        tools:text="1" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginRight="@dimen/_20sdp"
+        android:background="@color/colorAccent"/>
+</RelativeLayout>

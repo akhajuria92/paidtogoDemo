@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+    </data>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:animateLayoutChanges="true"
+        android:fillViewport="true">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/mContainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:focusableInTouchMode="true"
+            android:animateLayoutChanges="true">
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/mFirstNameIL"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="12dp"
+                android:hint="FIRST NAME"
+
+                android:textColorHint="@color/black"
+                app:layout_constraintEnd_toStartOf="@id/mLastNameIL"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/mFirstName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:imeOptions="actionNext"
+                    android:inputType="textPersonName"
+                    android:lines="1"
+                    android:textColor="@android:color/darker_gray"
+                    android:nextFocusDown="@+id/mLastNameIL" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/mLastNameIL"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="12dp"
+                android:textColorHint="@color/black"
+
+                android:hint="LAST NAME"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/mFirstNameIL"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/mLastName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:imeOptions="actionNext"
+                    android:textColor="@android:color/darker_gray"
+
+                    android:inputType="textPersonName"
+                    android:lines="1"
+                    android:nextFocusDown="@+id/mEmailIL" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/mEmailIL"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:textColorHint="@color/black"
+
+                android:layout_margin="12dp"
+                android:hint="EMAIL"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/mFirstNameIL">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/mEmail"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@android:color/darker_gray"
+                    android:imeOptions="actionDone"
+                    android:inputType="textEmailAddress"
+                    android:lines="1" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/mLinkPayPalT"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColorHint="@color/black"
+                android:layout_marginLeft="12dp"
+                android:hint="PAYPAL ACCOUNT"
+                app:layout_constraintBottom_toTopOf="@id/mChangePassword"
+                app:layout_constraintEnd_toEndOf="@id/mEmailIL"
+                app:layout_constraintHorizontal_bias="0"
+                app:layout_constraintStart_toStartOf="@id/mEmailIL"
+                app:layout_constraintTop_toBottomOf="@id/mEmailIL"
+                app:layout_constraintVertical_bias="0" >
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/mLinkPayPal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColorHint="@color/black"
+                android:textColor="@android:color/darker_gray"
+                android:gravity="center_vertical"
+                android:inputType="textCapCharacters" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <TextView
+                android:id="@+id/mHint"
+                android:layout_width="wrap_content"
+                android:gravity="center"
+                android:textColor="@color/black"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/_16sdp"
+                android:text="Please do not add paypal.me addresses. Just use your email associated with your paypal account"
+                app:layout_constraintTop_toBottomOf="@+id/mLinkPayPalT"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent" />
+
+            <TextView
+                android:id="@+id/mChangePassword"
+                android:layout_width="wrap_content"
+                android:gravity="center"
+                android:textColor="@color/black"
+                android:layout_height="wrap_content"
+                android:layout_margin="16dp"
+                android:text="@string/change_password_new"
+                app:layout_constraintTop_toBottomOf="@+id/mHint"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+               />
+
+            <TextView
+                android:id="@+id/mOk"
+                style="@style/LoginButton"
+                android:layout_height="wrap_content"
+                android:paddingTop="@dimen/_5sdp"
+                android:paddingBottom="@dimen/_5sdp"
+                android:paddingLeft="@dimen/_20sdp"
+                android:paddingRight="@dimen/_20sdp"
+                android:layout_width="wrap_content"
+                android:layout_margin="@dimen/activity_vertical_margin"
+                android:background="@drawable/background_button_login"
+                android:text="UPDATE"
+                android:backgroundTint="@color/app_yellow"
+                android:textColor="@android:color/white"
+                app:layout_constraintTop_toBottomOf="@+id/mChangePassword"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"/>
+
+            <TextView
+                android:id="@+id/delete"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="@dimen/_15sdp"
+                android:paddingTop="@dimen/_5sdp"
+                android:paddingBottom="@dimen/_5sdp"
+                android:paddingRight="@dimen/_15sdp"
+                android:layout_margin="@dimen/activity_vertical_margin"
+                android:text="DELETE ACCOUNT"
+                android:background="@color/app_red"
+                android:textColor="@android:color/white"
+                app:layout_constraintTop_toBottomOf="@+id/mOk"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+          />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </androidx.core.widget.NestedScrollView>
+</layout>

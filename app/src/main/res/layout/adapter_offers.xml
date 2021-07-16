@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/textviewAmount"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="@dimen/_14sdp"
+        android:layout_marginEnd="16dp"
+        android:text="$500"
+        android:textSize="@dimen/_50sdp"
+        android:shadowColor="@color/light_black"
+        android:shadowDx="1"
+        android:shadowDy="2"
+        android:shadowRadius="1"
+
+        android:gravity="center"
+        android:textColor="@android:color/black"
+        android:fontFamily="@font/sf_display_medium"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        />
+
+
+    <TextView
+        android:id="@+id/textViewOfferName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="@dimen/_16sdp"
+        android:fontFamily="@font/sf_display_regular"
+        android:shadowColor="@color/light_black"
+        android:shadowDx="1"
+        android:shadowDy="2"
+        android:shadowRadius="1"
+        android:text="Offer Name: Offer1"
+        android:textAllCaps="false"
+        android:textColor="@color/pool_bg_color"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textviewAmount" />
+
+
+    <TextView
+        android:id="@+id/textViewRequiredCoin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="@dimen/_8sdp"
+        android:fontFamily="@font/sf_display_regular"
+        android:shadowColor="@color/light_black"
+        android:shadowDx="1"
+        android:shadowDy="2"
+        android:shadowRadius="1"
+        android:text="Required Coins: 1500"
+        android:textAllCaps="false"
+        android:textColor="@color/pool_bg_color"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewOfferName" />
+
+    <TextView
+        android:id="@+id/textViewUnitRemaining"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="@dimen/_8sdp"
+        android:fontFamily="@font/sf_display_regular"
+        android:shadowColor="@color/light_black"
+        android:shadowDx="1"
+        android:shadowDy="2"
+        android:shadowRadius="1"
+        android:text="Unit Remaining: 10"
+        android:textAllCaps="false"
+        android:textColor="@color/pool_bg_color"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewRequiredCoin" />
+
+
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
+        android:shadowColor="@color/light_black"
+        android:shadowDx="1"
+        android:shadowDy="2"
+        android:shadowRadius="1"
+        android:text="@string/this_offer_is_for_a_paypal_payout_of_the_amount_listed_in_the_offer_click_the_purchase_button_to_order_your_paypal_payout_payouts_are_made_up_to_30_days_after_purchasing_the_offer_if_no_units_are_available_check_back_at_the_begining_of_the_next_month"
+        android:textColor="@android:color/black"
+        android:textSize="@dimen/_10sdp"
+        app:layout_constraintBottom_toTopOf="@+id/relativeLayoutPurchase"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewUnitRemaining"
+        app:layout_constraintVertical_bias="0.988"></TextView>
+
+    <RelativeLayout
+        android:id="@+id/relativeLayoutPurchase"
+        android:layout_width="@dimen/_150sdp"
+        android:layout_height="@dimen/_30sdp"
+        android:layout_marginBottom="16dp"
+        android:background="@android:color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+
+        <TextView
+            android:id="@+id/textViewPrice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:fontFamily="@font/sf_display_medium"
+            android:gravity="center"
+            android:text="Purchase Payout"
+            android:textAllCaps="true"
+            android:textColor="@color/pool_bg_color"
+            android:textSize="18sp" />
+
+    </RelativeLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

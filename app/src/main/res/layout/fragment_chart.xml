@@ -1,0 +1,244 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimaryDark"
+    android:orientation="vertical">
+
+    <LinearLayout
+
+        android:weightSum="3"
+        android:layout_marginTop="@dimen/_15sdp"
+        android:layout_marginRight="@dimen/_15sdp"
+        android:layout_marginLeft="@dimen/_15sdp"
+        android:layout_width="match_parent"
+        android:background="@drawable/green_boarder"
+
+        android:layout_height="@dimen/_35sdp">
+<Button
+
+    android:id="@+id/btn_daily"
+    android:text="Daily"
+    android:textAllCaps="false"
+    android:textColor="@color/white"
+    android:background="@drawable/green_solid"
+    android:layout_width="wrap_content"
+    android:layout_weight="1"
+    android:layout_height="@dimen/_35sdp"/>
+        <Button
+            android:id="@+id/btn_week"
+            android:text="Weekly"
+            android:background="@drawable/green_boarder"
+            android:textAllCaps="false"
+            android:textColor="@color/app_green"
+            android:layout_width="wrap_content"
+            android:layout_weight="1"
+            android:layout_height="@dimen/_35sdp"/>
+        <Button
+            android:background="@drawable/green_boarder"
+
+            android:id="@+id/btn_month"
+            android:text="Montly"
+            android:textAllCaps="false"
+            android:textColor="@color/app_green"
+            android:layout_width="wrap_content"
+            android:layout_weight="1"
+
+            android:layout_height="@dimen/_35sdp"/>
+
+
+
+
+    </LinearLayout>
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_50sdp"
+        android:visibility="gone"
+        android:background="@color/colorPrimary">
+
+        <Spinner
+            android:id="@+id/sp1"
+            android:layout_width="186dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            android:visibility="visible"
+            app:layout_constraintEnd_toStartOf="@+id/sp2"
+            app:layout_constraintStart_toStartOf="parent"
+            tools:layout_editor_absoluteY="0dp" />
+
+        <Spinner
+            android:id="@+id/sp2"
+            android:layout_width="186dp"
+            android:layout_height="match_parent"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            android:gravity="center_horizontal"
+            android:visibility="visible"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/sp1"
+            tools:layout_editor_absoluteY="0dp" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:id="@+id/ll_recyclerview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:visibility="gone" />
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/ll_graph"
+            android:visibility="visible"
+            android:layout_below="@+id/ll_recyclerview"
+            android:orientation="vertical">
+
+            <HorizontalScrollView
+
+                android:id="@+id/tabs"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginStart="0dp"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:layout_marginBottom="@dimen/_10sdp"
+                android:scrollbars="none">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/_5sdp">
+
+                    <Button
+                        android:id="@+id/b1"
+                        android:layout_width="@dimen/_80sdp"
+                        android:layout_height="@dimen/_30sdp"
+                        android:layout_marginStart="10dp"
+                        android:background="@drawable/ripple_medium_size"
+                        android:text="Coins Earned"
+                        android:textSize="@dimen/_9sdp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        tools:layout_editor_absoluteY="6dp">
+
+                    </Button>
+
+                    <Button
+                        android:id="@+id/b2"
+                        android:layout_width="@dimen/_80sdp"
+                        android:layout_height="@dimen/_30sdp"
+                        android:layout_marginStart="8dp"
+                        android:background="@drawable/ripple_medium_size"
+                        android:text="Distance Traveled"
+                        android:textSize="@dimen/_9sdp"
+                        app:layout_constraintStart_toEndOf="@+id/b1"
+                        tools:layout_editor_absoluteY="6dp"></Button>
+
+                    <Button
+                        android:id="@+id/b3"
+                        android:layout_width="@dimen/_80sdp"
+                        android:layout_height="@dimen/_30sdp"
+                        android:layout_marginStart="8dp"
+                        android:background="@drawable/ripple_medium_size"
+                        android:text="Calories Burned"
+                        android:textSize="@dimen/_9sdp"
+                        app:layout_constraintStart_toEndOf="@+id/b2"
+                        tools:layout_editor_absoluteY="6dp">
+
+                    </Button>
+
+                    <Button
+                        android:id="@+id/b4"
+                        android:layout_width="@dimen/_80sdp"
+                        android:layout_height="@dimen/_30sdp"
+                        android:layout_marginStart="8dp"
+                        android:background="@drawable/ripple_medium_size"
+                        android:text="CO2 Offset"
+                        android:textSize="@dimen/_9sdp"
+                        app:layout_constraintStart_toEndOf="@+id/b3"
+                        tools:layout_editor_absoluteY="6dp">
+
+                    </Button>
+
+                    <Button
+                        android:id="@+id/b5"
+                        android:layout_width="@dimen/_80sdp"
+                        android:layout_height="@dimen/_30sdp"
+                        android:layout_marginStart="8dp"
+                        android:background="@drawable/ripple_medium_size"
+                        android:text="Total Steps"
+                        android:textSize="@dimen/_9sdp"
+                        app:layout_constraintStart_toEndOf="@+id/b4"
+                        tools:layout_editor_absoluteY="6dp">
+
+                    </Button>
+
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </HorizontalScrollView>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/tabs">
+
+                <TextView
+                    android:layout_marginLeft="@dimen/_25sdp"
+                    android:id="@+id/Xtext"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_marginStart="4dp"
+                    android:layout_marginBottom="8dp"
+                    android:text="USD"
+                    />
+
+                <TextView
+                    android:id="@+id/Ytext"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
+                    android:layout_marginBottom="@dimen/_10sdp"
+                    android:text="Daily"
+
+                    android:layout_centerInParent="true"
+                    android:layout_alignParentBottom="true"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent" />
+
+
+                <com.github.mikephil.charting.charts.BarChart
+                    android:layout_below="@+id/Xtext"
+                    android:id="@+id/chart"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+
+                    android:layout_marginBottom="@dimen/_40sdp"
+                    android:background="@color/colorPrimary"
+
+                    />
+
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+
+
+
+</LinearLayout>

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/_40sdp">
+
+
+
+    <TextView
+        android:id="@+id/bullet"
+        android:layout_alignParentLeft="true"
+        android:layout_centerInParent="true"
+        android:background="@drawable/bullet_black"
+        android:layout_width="12dp"
+        android:layout_height="12dp"
+        android:layout_marginStart="@dimen/_14sdp"
+        android:layout_marginTop="@dimen/_16sdp"
+        android:fontFamily="@font/sf_display_medium"
+        android:textColor="@android:color/black"
+        android:textSize="@dimen/_14sdp"
+        >
+    </TextView>
+
+
+
+    <TextView
+        android:layout_toRightOf="@+id/bullet"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:id="@+id/textViewItem"
+        android:layout_marginStart="@dimen/_14sdp"
+        android:text="Deepak Testing purpose"
+        android:fontFamily="@font/sf_display_medium"
+        android:textColor="@android:color/black"
+        android:textSize="@dimen/_14sdp"
+        >
+    </TextView>
+
+
+</RelativeLayout>

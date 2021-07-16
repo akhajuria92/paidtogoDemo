@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout >
+    <data>
+        <variable name="viewModel" type="com.aaronevans.paidtogo.ui.main.coupons.CouponsContract.ViewModel"/>
+    </data>
+    <androidx.constraintlayout.widget.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:clipChildren="false">
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/horizontal_guideline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_begin="90dp"/>
+
+        <TextView
+            android:id="@+id/mSliderHint"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="WITH IN"
+            android:layout_marginLeft="24dp"
+            android:layout_marginTop="10dp"
+            android:fontFamily="@font/firasans_regular"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/mSliderText"
+            app:layout_constraintHorizontal_chainStyle="spread_inside"/>
+
+        <TextView
+            android:id="@+id/mSliderText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="5 MILES"
+            android:layout_marginRight="24dp"
+            android:layout_marginTop="10dp"
+            android:fontFamily="@font/firasans_regular"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/mSliderHint"/>
+        
+        <View
+            android:id="@+id/mSBStart"
+            app:layout_constraintTop_toTopOf="@id/mSeekBar"
+            app:layout_constraintBottom_toBottomOf="@id/mSeekBar"
+            app:layout_constraintStart_toStartOf="@id/mSeekBar"
+            app:layout_constraintEnd_toStartOf="@id/mSB1Post"
+            app:layout_constraintHorizontal_chainStyle="spread_inside"
+            style="@style/SBVerticalIndicator" />
+
+        <View
+            android:id="@+id/mSB1Post"
+            app:layout_constraintTop_toTopOf="@id/mSeekBar"
+            app:layout_constraintBottom_toBottomOf="@id/mSeekBar"
+            app:layout_constraintStart_toEndOf="@id/mSBStart"
+            app:layout_constraintEnd_toStartOf="@id/mSBMiddle"
+            style="@style/SBVerticalIndicator" />
+
+        <View
+            android:id="@+id/mSBMiddle"
+            app:layout_constraintTop_toTopOf="@id/mSeekBar"
+            app:layout_constraintBottom_toBottomOf="@id/mSeekBar"
+            app:layout_constraintStart_toEndOf="@id/mSB1Post"
+            app:layout_constraintEnd_toStartOf="@id/mSB2Post"
+            android:background="#00FFFFFF"
+            style="@style/SBVerticalIndicator" />
+
+        <View
+            android:id="@+id/mSB2Post"
+            app:layout_constraintTop_toTopOf="@id/mSeekBar"
+            app:layout_constraintBottom_toBottomOf="@id/mSeekBar"
+            app:layout_constraintStart_toEndOf="@id/mSBMiddle"
+            app:layout_constraintEnd_toStartOf="@id/mSBEnd"
+            style="@style/SBVerticalIndicator" />
+
+        <View
+            android:id="@+id/mSBEnd"
+            app:layout_constraintTop_toTopOf="@id/mSeekBar"
+            app:layout_constraintBottom_toBottomOf="@id/mSeekBar"
+            app:layout_constraintStart_toEndOf="@id/mSB2Post"
+            app:layout_constraintEnd_toEndOf="@id/mSeekBar"
+            style="@style/SBVerticalIndicator" />
+
+        <SeekBar
+            android:id="@+id/mSeekBar"
+            android:layout_width="0dp"
+            android:layout_height="30dp"
+            android:progress="50"
+            android:max="100"
+            android:padding="0dp"
+            android:layout_marginLeft="24dp"
+            android:layout_marginRight="24dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/mSliderHint"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="0.5"
+            android:fontFamily="@font/firasans_regular"
+            app:layout_constraintStart_toStartOf="@id/mSBStart"
+            app:layout_constraintEnd_toEndOf="@id/mSBStart"
+            app:layout_constraintTop_toBottomOf="@id/mSBStart"
+            app:layout_constraintBottom_toBottomOf="@id/horizontal_guideline"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="1"
+            android:fontFamily="@font/firasans_regular"
+            app:layout_constraintStart_toStartOf="@id/mSB1Post"
+            app:layout_constraintEnd_toEndOf="@id/mSB1Post"
+            app:layout_constraintTop_toBottomOf="@id/mSB1Post"
+            app:layout_constraintBottom_toBottomOf="@id/horizontal_guideline"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="25"
+            android:fontFamily="@font/firasans_regular"
+            app:layout_constraintStart_toStartOf="@id/mSB2Post"
+            app:layout_constraintEnd_toEndOf="@id/mSB2Post"
+            app:layout_constraintTop_toBottomOf="@id/mSB2Post"
+            app:layout_constraintBottom_toBottomOf="@id/horizontal_guideline"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="50"
+            android:fontFamily="@font/firasans_regular"
+            app:layout_constraintStart_toStartOf="@id/mSBEnd"
+            app:layout_constraintEnd_toEndOf="@id/mSBEnd"
+            app:layout_constraintTop_toBottomOf="@id/mSBEnd"
+            app:layout_constraintBottom_toBottomOf="@id/horizontal_guideline"/>
+
+        <androidx.viewpager.widget.ViewPager
+            android:id="@+id/mPager"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:background="#EAEAEA"
+            app:layout_constraintTop_toTopOf="@id/horizontal_guideline"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

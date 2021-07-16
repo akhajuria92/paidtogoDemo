@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable name="viewModel"
+            type="com.aaronevans.paidtogo.data.remote.response.WinnersResponse"/>
+    </data>
+    <androidx.cardview.widget.CardView
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:elevation="@dimen/_5sdp"
+        app:cardElevation="@dimen/_10sdp"
+        app:cardCornerRadius="5dp"
+        app:cardBackgroundColor="@color/transparent_white_60"
+        app:cardMaxElevation="10dp"
+        android:padding="@dimen/_10sdp"
+        android:layout_height="250dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="8dp"
+            android:background="@drawable/round_rect"
+            android:elevation="5dp">
+
+            <TextView
+                android:id="@+id/mTitle"
+                android:layout_width="wrap_content"
+                android:textColor="@color/black"
+                android:layout_height="wrap_content"
+                android:textAllCaps="true"
+                android:textStyle="bold"
+                android:layout_marginLeft="@dimen/_10sdp"
+                android:layout_marginTop="@dimen/_15sdp"
+                android:fontFamily="@font/firasans_medium"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/mProfilePicture"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:background="@drawable/solid_circle"
+                android:src="@drawable/ic_profile_placeholder"
+                app:layout_constraintTop_toBottomOf="@id/mTitle"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"/>
+
+            <TextView
+                android:id="@+id/mPointsText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:textSize="30sp"
+                android:text="$0.00"
+                android:fontFamily="@font/firasans_medium"
+                app:layout_constraintTop_toBottomOf="@id/mTitle"
+                app:layout_constraintBottom_toTopOf="@id/mPointsLabelText"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toStartOf="@id/mProfilePicture"
+                app:layout_constraintVertical_chainStyle="packed"/>
+
+            <TextView
+                android:id="@+id/mPointsLabelText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="USD"
+                android:textSize="18sp"
+                android:textColor="@color/black"
+                android:fontFamily="@font/firasans_medium"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@id/mProfilePicture"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/mPointsText" />
+
+            <TextView
+                android:id="@+id/textViewPosition"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="-"
+                android:textColor="@color/black"
+                android:textSize="30sp"
+                android:fontFamily="@font/firasans_medium"
+                app:layout_constraintTop_toBottomOf="@id/mTitle"
+                app:layout_constraintBottom_toTopOf="@id/mPlaceLabelText"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/mProfilePicture"
+                app:layout_constraintVertical_chainStyle="packed"/>
+
+            <TextView
+                android:id="@+id/mPlaceLabelText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/place"
+                android:textColor="@color/black"
+                android:textSize="18sp"
+                android:fontFamily="@font/firasans_medium"
+                app:layout_constraintTop_toBottomOf="@id/textViewPosition"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/mProfilePicture"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="th"
+                android:id="@+id/textViewRankth"
+                android:fontFamily="@font/firasans_medium"
+                app:layout_constraintStart_toEndOf="@id/textViewPosition"
+                app:layout_constraintTop_toTopOf="@id/textViewPosition"/>
+
+<!--            <TextView-->
+<!--                android:id="@+id/mFundsAvailable"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                tools:text="Funds Available: "-->
+<!--                android:textAllCaps="false"-->
+<!--                android:layout_marginTop="@dimen/_30sdp"-->
+<!--                android:textStyle="bold"-->
+<!--                android:gravity="center"-->
+<!--                android:fontFamily="@font/firasans_medium"-->
+<!--                app:layout_constraintBottom_toBottomOf="parent"-->
+<!--                app:layout_constraintStart_toStartOf="parent" />-->
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+</layout>
